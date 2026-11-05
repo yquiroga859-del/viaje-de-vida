@@ -1,0 +1,378 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viaje de Vida - Terapias, Cursos y Suscripciones</title>
+    <style>
+        :root {
+            --primary: #6b46c1; /* Violeta armónico */
+            --secondary: #48bb78; /* Verde natural */
+            --accent: #ed64a6; /* Rosa suave */
+            --mp-blue: #009ee3; /* Azul Mercado Pago */
+            --bg: #f7fafc;
+            --text: #2d3748;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+        header p {
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .banner-primer-paso {
+            background: linear-gradient(135deg, #6b46c1, #9f7aea);
+            color: white;
+            padding: 1.8rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .banner-primer-paso h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+        .banner-sorteo {
+            background: linear-gradient(135deg, #48bb78, #319795);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            font-weight: bold;
+        }
+        section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1rem;
+        }
+        .card {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.2rem;
+            text-align: center;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+        }
+        .card-vip {
+            border: 2px solid var(--accent);
+            background: #fff5f7;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        input, select {
+            padding: 0.8rem;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background-color: #553c9a;
+        }
+        .btn-green {
+            background-color: var(--secondary);
+        }
+        .btn-green:hover {
+            background-color: #38a169;
+        }
+        .btn-mp {
+            background-color: var(--mp-blue);
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-top: 0.8rem;
+            display: inline-block;
+            transition: background 0.2s;
+        }
+        .btn-mp:hover {
+            background-color: #0081bc;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            color: #718096;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Viaje de Vida</h1>
+        <p>Terapias Holísticas, Cursos y Suscripciones</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Primer Paso: Bienvenida e Inspiración -->
+        <div class="banner-primer-paso">
+            <h3>🌱 Tu Primer Paso Hacia el Bienestar</h3>
+            <p>Todo gran cambio interior comienza con la decisión de reconectar con tu esencia. Elegí el espacio de sanación, el curso o la membresía ideal para acompañar tu proceso de evolución personal.</p>
+        </div>
+
+        <!-- Aviso de Sorteos Semanales -->
+        <div class="banner-sorteo">
+            🎉 ¡Anotándote a cualquier curso, sesión o membresía participás automáticamente de nuestros Sorteos Semanales!
+        </div>
+
+        <!-- Sección de Suscripciones Mensuales -->
+        <section>
+            <h2>🌟 Planes de Suscripción Mensual</h2>
+            <div class="grid">
+                <!-- Plan $10.000 -->
+                <div class="card">
+                    <div>
+                        <h3>Plan Esencial</h3>
+                        <p><strong>$10.000 / mes</strong></p>
+                        <p>Participás del <strong>sorteo semanal</strong> de terapias, cursos y sorpresas.</p>
+                    </div>
+                    <a href="https://mpago.la/1kYbut7" target="_blank" class="btn-mp">Suscribirme ($10.000)</a>
+                </div>
+
+                <!-- Plan $20.000 -->
+                <div class="card">
+                    <div>
+                        <h3>Plan Armonía</h3>
+                        <p><strong>$20.000 / mes</strong></p>
+                        <p>Participás de los <strong>sorteos semanales</strong> + <strong>1 sesión gratis por mes</strong> a elección.</p>
+                    </div>
+                    <a href="https://mpago.la/1kYbut7" target="_blank" class="btn-mp">Suscribirme ($20.000)</a>
+                </div>
+
+                <!-- Plan $30.000 VIP -->
+                <div class="card card-vip">
+                    <div>
+                        <h3>Plan Viaje de Vida VIP</h3>
+                        <p><strong>$30.000 / mes</strong></p>
+                        <p>Participás de los <strong>sorteos semanales</strong> + <strong>1 sesión por mes</strong> + <strong>1 curso por mes</strong> para aprender.</p>
+                    </div>
+                    <a href="https://mpago.la/1kYbut7" target="_blank" class="btn-mp">Suscribirme VIP ($30.000)</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registro directo a la Lista de Sorteos -->
+        <section>
+            <h2>🎁 Anotate a los Sorteos Semanales</h2>
+            <p style="margin-top: 0; color: #4a5568;">¿Ya realizaste una suscripción, terapia o querés asegurar tu lugar en el próximo sorteo? Dejanos tus datos y sumate a la lista oficial.</p>
+            <form id="formSorteo">
+                <input type="text" id="nombreSorteo" placeholder="Tu Nombre y Apellido" required>
+                <input type="text" id="telSorteo" placeholder="Tu Teléfono / WhatsApp" required>
+                <select id="planSorteoSelect" required>
+                    <option value="">Seleccioná tu plan o motivo de participación...</option>
+                    <option value="Plan Esencial ($10.000)">Plan Esencial ($10.000)</option>
+                    <option value="Plan Armonía ($20.000)">Plan Armonía ($20.000)</option>
+                    <option value="Plan VIP ($30.000)">Plan VIP ($30.000)</option>
+                    <option value="Sesión o Curso Individual">Realicé una Sesión / Curso Individual</option>
+                </select>
+                <button type="submit" class="btn-green">¡Anotarme a la Lista de Sorteos (WhatsApp)!</button>
+            </form>
+        </section>
+
+        <!-- Sección de Terapias y Sesiones Individuales -->
+        <section>
+            <h2>✨ Terapias y Sesiones Individuales</h2>
+            <div class="grid">
+                <div class="card">
+                    <div>
+                        <h3>Flores de Bach</h3>
+                        <p>Armonización emocional con el sistema de 38 esencias.</p>
+                    </div>
+                    <a href="https://mpago.la/1kYbut7" target="_blank" class="btn-mp">Pagar Sesión</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>Reiki y Cristales</h3>
+                        <p>Canalización de energía universal para equilibrar tu energía.</p>
+                    </div>
+                    <a href="https://mpago.la/1kYbut7" target="_blank" class="btn-mp">Pagar Sesión</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>Mesas Radiónicas</h3>
+                        <p>Limpieza y reestructuración energética cuántica profunda.</p>
+                    </div>
+                    <a href="https://mpago.la/1kYbut7" target="_blank" class="btn-mp">Pagar Sesión</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Cursos y Formaciones -->
+        <section>
+            <h2>📚 Cursos y Formaciones</h2>
+            <div class="grid">
+                <div class="card">
+                    <div>
+                        <h3>Reiki Nivel 1</h3>
+                        <p>Formación inicial teórico-práctica para canalización energética.</p>
+                    </div>
+                    <a href="https://mpago.la/1kYbut7" target="_blank" class="btn-mp">Inscribirme al Curso</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>Terapeuta Floral</h3>
+                        <p>Capacitación profesional en el sistema de Flores de Bach.</p>
+                    </div>
+                    <a href="https://mpago.la/1kYbut7" target="_blank" class="btn-mp">Inscribirme al Curso</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>Mesas Radiónicas</h3>
+                        <p>Entrenamiento intensivo para operadoras y operadores.</p>
+                    </div>
+                    <a href="https://mpago.la/1kYbut7" target="_blank" class="btn-mp">Inscribirme al Curso</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reserva de Turnos -->
+        <section>
+            <h2>📅 Reserva de Turno</h2>
+            <form id="formTurno">
+                <input type="text" id="nombreTurno" placeholder="Tu Nombre y Apellido" required>
+                <select id="terapiaSelect" required>
+                    <option value="">Seleccioná una sesión / terapia...</option>
+                    <option value="Flores de Bach (Sesión)">Flores de Bach</option>
+                    <option value="Reiki y Cristales (Sesión)">Reiki y Cristales</option>
+                    <option value="Mesa Radiónica Cuántica (Sesión)">Mesa Radiónica Cuántica</option>
+                </select>
+                <input type="date" id="fechaTurno" required>
+                <button type="submit">Reservar Turno (Vía WhatsApp)</button>
+            </form>
+        </section>
+
+        <!-- Inscripciones y Consultas -->
+        <section>
+            <h2>🎓 Consultas e Inscripciones</h2>
+            <form id="formCurso">
+                <input type="text" id="nombreCursoPersona" placeholder="Tu Nombre y Apellido" required>
+                <input type="email" id="emailCurso" placeholder="Tu Correo Electrónico" required>
+                <select id="cursoSelect" required>
+                    <option value="">Seleccioná una opción...</option>
+                    <option value="Suscripción Plan Esencial $10.000 (Sorteos)">Plan Esencial $10.000 (Sorteos)</option>
+                    <option value="Suscripción Plan Armonía $20.000 (Sorteos + Sesión)">Plan Armonía $20.000 (Sorteos + 1 Sesión)</option>
+                    <option value="Suscripción Plan VIP $30.000 (Sorteos + Sesión + Curso)">Plan VIP $30.000 (Sorteos + Sesión + Curso)</option>
+                    <option value="Reiki Nivel 1">Reiki Nivel 1</option>
+                    <option value="Terapeuta Floral">Terapeuta Floral</option>
+                    <option value="Mesas Radiónicas">Mesas Radiónicas</option>
+                </select>
+                <button type="submit" class="btn-green">Consultar / Anotarme (WhatsApp)</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Viaje de Vida. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // CONFIGURACIÓN DE WHATSAPP CON TU NÚMERO
+        const CONFIG = {
+            whatsappNumber: "5493541334168"
+        };
+
+        // Turnos
+        document.getElementById('formTurno').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombreTurno').value;
+            const terapia = document.getElementById('terapiaSelect').value;
+            const fecha = document.getElementById('fechaTurno').value;
+
+            const mensaje = `Hola! Soy ${nombre}. Reservo la sesión de ${terapia} para el día ${fecha}. (¡Y participo del sorteo semanal!)`;
+            const urlWhatsApp = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(mensaje)}`;
+            window.open(urlWhatsApp, '_blank');
+        });
+
+        // Cursos y Planes
+        document.getElementById('formCurso').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombreCursoPersona').value;
+            const email = document.getElementById('emailCurso').value;
+            const curso = document.getElementById('cursoSelect').value;
+
+            const mensaje = `Hola! Soy ${nombre} (Mail: ${email}). Me interesa la opción: ${curso}. (¡Quiero quedar en la lista para el sorteo semanal!)`;
+            const urlWhatsApp = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(mensaje)}`;
+            window.open(urlWhatsApp, '_blank');
+        });
+
+        // Sorteos
+        document.getElementById('formSorteo').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombreSorteo').value;
+            const tel = document.getElementById('telSorteo').value;
+            const plan = document.getElementById('planSorteoSelect').value;
+
+            const mensaje = `Hola! Soy ${nombre} (Tel: ${tel}). Me quiero anotar a la lista oficial para los sorteos semanales. Participo con: ${plan}.`;
+            const urlWhatsApp = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(mensaje)}`;
+            window.open(urlWhatsApp, '_blank');
+        });
+    </script>
+
+</body>
+</html>
