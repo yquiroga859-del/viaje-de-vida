@@ -385,3 +385,333 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viaje de Vida - Terapias Holísticas y Evolución Personal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4c1d95;
+            --secondary: #7c3aed;
+            --accent: #f472b6;
+            --gold: #d97706;
+            --bg-light: #faf5ff;
+            --card-bg: #ffffff;
+            --text-dark: #1f2937;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(135deg, #3b0764, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 5rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid var(--accent);
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 40px;
+            background: linear-gradient(to top, var(--bg-light), transparent);
+        }
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.5px;
+            animation: fadeInDown 1s ease;
+        }
+        header p {
+            font-size: 1.25rem;
+            opacity: 0.92;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        .container {
+            max-width: 1100px;
+            margin: -2rem auto 3rem auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+        section {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 15px 35px rgba(76, 29, 149, 0.08);
+            border: 1px solid rgba(244, 114, 182, 0.15);
+            transition: transform 0.3s ease;
+        }
+        section:hover {
+            box-shadow: 0 20px 40px rgba(76, 29, 149, 0.12);
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 2.3rem;
+            margin-top: 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: #fdf4f8;
+            border: 1px solid #fce7f3;
+            border-radius: 16px;
+            padding: 2.2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            background: #ffffff;
+            box-shadow: 0 15px 30px rgba(124, 58, 237, 0.12);
+            border-color: var(--accent);
+        }
+        .card h3 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .card p {
+            color: #4b5563;
+            font-size: 0.98rem;
+            margin-bottom: 1.5rem;
+        }
+        .btn-mp {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            padding: 0.85rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.25);
+        }
+        .btn-mp:hover {
+            transform: scale(1.04);
+            box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+            opacity: 0.95;
+        }
+        .interactive-box {
+            background: linear-gradient(135deg, #fff1f2, #faf5ff);
+            border: 2px dashed var(--accent);
+            text-align: center;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+        }
+        .tarot-options {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        .tarot-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 1.1rem 2rem;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.15rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 29, 149, 0.2);
+        }
+        .tarot-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(76, 29, 149, 0.3);
+        }
+        #resultadoTarot, #textoMensajeContainer {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #6b7280;
+            font-size: 0.95rem;
+            border-top: 1px solid #e5e7eb;
+            background: #ffffff;
+        }
+        @media(max-width: 768px) {
+            header h1 { font-size: 2.3rem; }
+            section { padding: 2rem 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Viaje de Vida</h1>
+        <p>Terapias Holísticas, Formaciones y Canales de Evolución Personal para armonizar tu energía y transformar tu realidad.</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Sección Interactiva: Mensaje del Día -->
+        <section class="interactive-box" style="border-color: var(--secondary); background: linear-gradient(135deg, #faf5ff, #f3e8ff);">
+            <h2>✨ Mensaje del Día para tu Alma</h2>
+            <p style="color: #4b5563; margin-bottom: 1.5rem;">Hacé clic en el botón para recibir la guía y la energía exacta que necesitás hoy.</p>
+            <div id="textoMensajeContainer" style="font-size: 1.2rem; font-style: italic; color: var(--primary); margin: 1.5rem auto; max-width: 750px; background: white; padding: 2rem; border-radius: 14px; border: 1px solid #d8b4fe; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+                "Hacé clic en el botón inferior para revelar tu mensaje sincrónico de hoy."
+            </div>
+            <button onclick="mostrarMensaje()" class="tarot-btn" style="background: var(--secondary);">🌟 Revelar Mi Mensaje</button>
+        </section>
+
+        <!-- Sección Interactiva: Oráculo de Tarot Interactivo -->
+        <section class="interactive-box">
+            <h2>🃏 Oráculo de Tarot Interactivo ($2.000)</h2>
+            <p style="color: #4b5563; margin-bottom: 1.5rem;">Elegí una de las 3 cartas ocultas para recibir guía y claridad inmediata en tu camino.</p>
+            
+            <div class="tarot-options">
+                <button class="tarot-btn" onclick="elegirCarta(1)">Carta 1 ✨</button>
+                <button class="tarot-btn" onclick="elegirCarta(2)">Carta 2 🌙</button>
+                <button class="tarot-btn" onclick="elegirCarta(3)">Carta 3 🔥</button>
+            </div>
+
+            <div id="resultadoTarot" style="background: white; padding: 2.5rem; border-radius: 14px; border: 1px solid var(--accent); display: none; margin-top: 2rem; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <h3 id="tituloCarta" style="color: var(--primary); margin-top: 0; text-align: center; font-family: 'Playfair Display', serif; font-size: 1.8rem;"></h3>
+                <p id="significadoCarta" style="font-style: italic; color: #4b5563; font-size: 1.15rem; text-align: center; line-height: 1.8; margin-top: 1rem;"></p>
+                <div style="text-align: center; margin-top: 2rem; border-top: 1px solid #f3e8ff; padding-top: 1.5rem;">
+                    <p style="margin: 0 0 1rem 0; font-weight: 600; color: var(--primary);">Valor de la lectura interpretativa: $2.000</p>
+                    <a href="https://mpago.la/1kYbut7" target="_blank" class="btn-mp">Abonar Lectura de Tarot ($2.000)</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terapias y Sesiones -->
+        <section>
+            <h2>🌿 Terapias y Sesiones Individuales</h2>
+            <div class="grid">
+                <div class="card">
+                    <div>
+                        <h3>Flores de Bach</h3>
+                        <p>Armonización emocional profunda a través del sistema tradicional de 38 esencias florales.</p>
+                    </div>
+                    <a href="https://mpago.la/1kYbut7" target="_blank" class="btn-mp">Pagar Sesión</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>Reiki y Cristales</h3>
+                        <p>Canalización de energía universal y vibración cristalina para restaurar tu paz interior.</p>
+                    </div>
+                    <a href="https://mpago.la/1kYbut7" target="_blank" class="btn-mp">Pagar Sesión</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>Mesas Radiónicas</h3>
+                        <p>Limpieza y reestructuración energética cuántica para disolver bloqueos y elevar tu frecuencia.</p>
+                    </div>
+                    <a href="https://mpago.la/1kYbut7" target="_blank" class="btn-mp">Pagar Sesión</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cursos y Formaciones -->
+        <section>
+            <h2>📚 Cursos y Formaciones</h2>
+            <div class="grid">
+                <div class="card">
+                    <div>
+                        <h3>Reiki Nivel 1</h3>
+                        <p>Formación inicial teórico-práctica orientada al despertar y canalización de energía vital.</p>
+                    </div>
+                    <a href="https://mpago.la/1kYbut7" target="_blank" class="btn-mp">Inscribirme al Curso</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>Terapeuta Floral</h3>
+                        <p>Capacitación profesional completa en el sistema internacional de Flores de Bach.</p>
+                    </div>
+                    <a href="https://mpago.la/1kYbut7" target="_blank" class="btn-mp">Inscribirme al Curso</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>Mesas Radiónicas</h3>
+                        <p>Entrenamiento intensivo y especializado para operadoras y operadores del sistema.</p>
+                    </div>
+                    <a href="https://mpago.la/1kYbut7" target="_blank" class="btn-mp">Inscribirme al Curso</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Viaje de Vida. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const mensajesHolisticos = [
+            "Flores de Bach: Hoy permitite soltar el control y confiar en tu proceso natural de sanación y armonización interior.",
+            "Reiki: Inhala luz dorada y exhala toda tensión acumulada. Tu energía vital se está equilibrando.",
+            "Mesa Radiónica: Tu campo energético se está reordenando hacia la vibración de la paz, la claridad y la abundancia.",
+            "Esencia de Mimulus: El coraje no es la ausencia de miedo, sino la decisión consciente de avanzar a pesar de él.",
+            "Esencia de Walnut: Te protegés de las influencias externas y avanzás firme hacia tu verdadera misión y propósito de vida.",
+            "Reiki y Cristales: La vibración de los cristales amplifica tu sanación. Conectá con tu centro de poder."
+        ];
+
+        function mostrarMensaje() {
+            const aleatorio = Math.floor(Math.random() * mensajesHolisticos.length);
+            document.getElementById('textoMensajeContainer').innerText = `"${mensajesHolisticos[aleatorio]}"`;
+        }
+
+        function elegirCarta(numero) {
+            const resultados = {
+                1: {
+                    nombre: "El Mago 🪄",
+                    significado: "Tenés todo el poder, la capacidad y los recursos internos necesarios para manifestar lo que deseás. Es el momento perfecto para tomar la iniciativa y confiar en tus talentos creadores."
+                },
+                2: {
+                    nombre: "La Sacerdotisa 🌙",
+                    significado: "Conectá profundamente con tu intuición y tu sabiduría interior. Hay respuestas que ya habitan en vos; solo necesitás regalarte un espacio de silencio para escucharlas."
+                },
+                3: {
+                    nombre: "El Sol ☀️",
+                    significado: "Vibración absoluta de claridad, alegría, vitalidad y éxito renovado. Todo aquello que sentías bloqueado comienza a iluminarse y resolverse con total armonía."
+                }
+            };
+
+            const cartaSeleccionada = resultados[numero];
+            document.getElementById('tituloCarta').innerText = cartaSeleccionada.nombre;
+            document.getElementById('significadoCarta').innerText = `"${cartaSeleccionada.significado}"`;
+            document.getElementById('resultadoTarot').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
