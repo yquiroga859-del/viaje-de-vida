@@ -23,3 +23,4 @@
             document.getElementById('textoMensaje').innerText = mensajesHolisticos[aleatorio];
         }
     </script>
+[!-- Sección Interactiva Elige tu Ca.txt](https://github.com/user-attachments/files/34443839/--.Seccion.Interactiva.Elige.tu.Ca.txt)
