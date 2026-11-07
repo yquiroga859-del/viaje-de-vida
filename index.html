@@ -203,6 +203,31 @@
             letter-spacing: 0.8rem;
         }
 
+        /* Botón Flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 22px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #20ba5a;
+            transform: scale(1.05);
+        }
+
         footer {
             text-align: center;
             padding: 3rem 1rem;
@@ -417,6 +442,11 @@
         </section>
     </div>
 
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/5493541334168?text=Hola%20Yanina,%20quiero%20más%20información%20sobre%20tus%20terapias%20y%20cursos" class="whatsapp-float" target="_blank">
+        💬 WhatsApp
+    </a>
+
     <footer>
         <p>&copy; 2026 Viaje de Vida. Todos los derechos reservados.</p>
     </footer>
@@ -474,10 +504,4 @@
         }
     </script>
 </body>
-</html><header>
-        <div class="logo-container">
-            <img src="https://i.ibb.co/6y18195/logo-viaje-de-vida.png" alt="Logo Viaje de Vida">
-        </div>
-        <h1>Viaje de Vida</h1>
-        <p>Terapias Holísticas, Formaciones y Canales de Evolución Personal para armonizar tu energía y transformar tu realidad.</p>
-    </header>
+</html>
