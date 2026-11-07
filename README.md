@@ -332,7 +332,7 @@
             </div>
         </section>
 
-        <!-- Terapias y Sesiones -->
+        <!-- Terapias y Sesiones ($15.000 cada una) -->
         <section>
             <h2>🌿 Terapias y Sesiones Individuales</h2>
             <div class="grid">
@@ -389,7 +389,7 @@
             </div>
         </section>
 
-        <!-- Cursos y Formaciones -->
+        <!-- Cursos y Formaciones ($60.000 cada uno) -->
         <section id="seccion-cursos">
             <h2>📚 Cursos y Formaciones</h2>
             <div class="grid">
