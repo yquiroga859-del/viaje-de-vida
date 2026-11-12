@@ -3,302 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viaje de Vida - Terapias Holísticas y Evolución Personal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Viaje de Vida - Mesas Radiónicas Cuánticas</title>
+    <!-- Fuentes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #4c1d95; /* Violeta profundo */
-            --secondary: #581c87; /* Violeta oscuro */
-            --accent: #facc15; /* Amarillo vibrante */
-            --bg-light: #fef9c3; /* Fondo amarillo muy suave */
-            --card-bg: #ffffff;
-            --text-dark: #111827; /* Negro / Gris muy oscuro para lectura */
+            --bg-deep: #120826;
+            --bg-card: #1f113a;
+            --accent-gold: #f3d28d;
+            --accent-gold-hover: #e0b968;
+            --text-light: #f5f5f7;
+            --text-muted: #d0c8e8;
+            --violet-glow: rgba(138, 43, 226, 0.3);
         }
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            scroll-behavior: smooth;
+            box-sizing: border-box;
         }
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
+            background-color: var(--bg-deep);
+            color: var(--text-light);
             line-height: 1.7;
+            overflow-x: hidden;
+            background-image: radial-gradient(white 1px, transparent 0);
+            background-size: 40px 40px;
         }
 
         header {
-            background: linear-gradient(135deg, #2e1065, var(--primary), var(--secondary));
-            color: white;
             text-align: center;
-            padding: 5rem 1.5rem;
-            position: relative;
-            border-bottom: 4px solid var(--accent);
-        }
-
-        .logo-container {
-            margin-bottom: 1.5rem;
-        }
-
-        .logo-container img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--accent);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-            background: white;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #1b0a36 0%, #0d041a 100%);
+            border-bottom: 2px solid var(--accent-gold);
         }
 
         header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.2rem;
-            margin-bottom: 0.8rem;
-            color: #ffffff;
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px rgba(243, 210, 141, 0.4);
         }
 
         header p {
-            font-size: 1.25rem;
-            opacity: 0.95;
-            max-width: 700px;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
             margin: 0 auto;
             font-weight: 300;
-            color: #f3f4f6;
         }
 
         .container {
-            max-width: 1100px;
-            margin: -2rem auto 3rem auto;
-            padding: 0 1.5rem;
-            position: relative;
-            z-index: 10;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
         }
 
-        section {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 3rem 2.5rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 15px 35px rgba(76, 29, 149, 0.1);
-            border: 2px solid #fef08a;
-        }
-
-        h2 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary);
-            font-size: 2.3rem;
-            margin-top: 0;
+        .intro {
             text-align: center;
-            margin-bottom: 2rem;
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 50px;
+            border: 1px solid rgba(243, 210, 141, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .grid {
+        .intro h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
         }
 
-        .card {
-            background: #fefce8;
-            border: 1px solid #fde047;
-            border-radius: 16px;
-            padding: 2.2rem;
-            text-align: center;
+        .service-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 30px;
+            border: 1px solid rgba(243, 210, 141, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: all 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-8px);
-            background: #ffffff;
-            box-shadow: 0 15px 30px rgba(76, 29, 149, 0.15);
-            border-color: var(--primary);
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px var(--violet-glow);
+            border-color: var(--accent-gold);
         }
 
-        .card h3 {
-            color: var(--primary);
-            margin-top: 0;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-family: 'Playfair Display', serif;
+        .service-card h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
         }
 
-        .card p {
-            color: #374151;
-            font-size: 0.98rem;
-            margin-bottom: 1.5rem;
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
         }
 
-        .price-tag {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .btn-mp {
+        .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, var(--secondary), var(--primary));
-            color: #ffffff;
-            padding: 0.85rem 1.8rem;
-            border-radius: 50px;
+            background-color: transparent;
+            color: var(--accent-gold);
+            border: 2px solid var(--accent-gold);
+            padding: 10px 20px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(76, 29, 149, 0.25);
-            border: 1px solid #facc15;
-        }
-
-        .btn-mp:hover {
-            transform: scale(1.04);
-            opacity: 0.95;
-            background: #3b0764;
-        }
-
-        .interactive-box {
-            background: linear-gradient(135deg, #fefce8, #fef9c3);
-            border: 2px dashed #facc15;
             text-align: center;
-            border-radius: 20px;
-            padding: 3rem 2rem;
-        }
-
-        .tarot-options {
-            display: flex;
-            justify-content: center;
-            gap: 1.2rem;
-            flex-wrap: wrap;
-            margin: 2rem 0;
-        }
-
-        .tarot-btn {
-            background: var(--primary);
-            color: #ffffff;
-            border: none;
-            padding: 1.1rem 2rem;
-            border-radius: 12px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 1.15rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(76, 29, 149, 0.2);
-            text-decoration: none;
-            display: inline-block;
+            margin-top: auto;
         }
 
-        .tarot-btn:hover {
-            background: var(--secondary);
-            transform: translateY(-4px);
-            color: var(--accent);
-        }
-
-        .elementos-magicos {
-            text-align: center;
-            font-size: 1.8rem;
-            margin: 1.5rem 0;
-            letter-spacing: 0.8rem;
-        }
-
-        /* Botón Flotante de WhatsApp */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50px;
-            padding: 12px 22px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .whatsapp-float:hover {
-            background-color: #20ba5a;
-            transform: scale(1.05);
+        .cta-button:hover {
+            background-color: var(--accent-gold);
+            color: var(--bg-deep);
+            box-shadow: 0 0 15px var(--accent-gold);
         }
 
         footer {
             text-align: center;
-            padding: 3rem 1rem;
-            color: #1f2937;
-            font-size: 0.95rem;
-            border-top: 2px solid #fef08a;
-            background: #ffffff;
-            font-weight: 500;
+            padding: 30px;
+            background-color: #0d041a;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(243, 210, 141, 0.1);
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-container">
-            <img src="https://i.ibb.co/6y18195/logo-viaje-de-vida.png" alt="Logo Viaje de Vida">
-        </div>
-        <h1>Viaje de Vida</h1>
-        <p>Terapias Holísticas, Formaciones y Canales de Evolución Personal para armonizar tu energía y transformar tu realidad.</p>
+        <h1>✨ Viaje de Vida ✨</h1>
+        <p>Sesiones de Mesas Radiónicas Cuánticas — Transita un camino de armonización y bienestar energético.</p>
     </header>
 
     <div class="container">
-        <!-- Elementos Mágicos Decorativos -->
-        <div class="elementos-magicos">
-            🌸 🔮 ✨ 🌿 🃏 💫
+        <div class="intro">
+            <h2>Bienvenida a tu espacio de sanación</h2>
+            <p>La Mesa Radiónica es una herramienta cuántica hermosa y muy potente que nos permite limpiar, desbloquear y armonizar diferentes aspectos de tu vida. Trabajo con tipos de mesas especializadas según lo que estés necesitando transitar hoy.</p>
         </div>
 
-        <!-- Mensaje del Día -->
-        <section class="interactive-box" style="border-color: var(--primary); background: linear-gradient(135deg, #fefce8, #fef08a);">
-            <h2>✨ Mensaje del Día para tu Alma ($2.000)</h2>
-            <p style="color: #1f2937; margin-bottom: 1.5rem;">Hacé clic en el botón para abonar tu mensaje sincrónico y recibir la guía exacta que necesitás hoy.</p>
-            <div id="textoMensajeContainer" style="font-size: 1.2rem; font-style: italic; color: var(--primary); margin: 1.5rem auto; max-width: 750px; background: white; padding: 2rem; border-radius: 14px; border: 2px solid var(--accent); box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                "Aboná para revelar tu mensaje sincrónico de hoy."
-            </div>
-            <a href="https://mpago.la/1qXS3wH" target="_blank" class="tarot-btn" style="background: var(--primary);" onclick="mostrarMensaje()">🌟 Abonar y Revelar Mi Mensaje ($2.000)</a>
-        </section>
-
-        <!-- Juego Interactivo: El Laberinto de los Chakras ($3.000) -->
-        <section class="interactive-box" style="background: linear-gradient(135deg, #fef08a, #fef9c3); border-color: var(--primary);">
-            <h2>🎮 Juego Interactivo: El Laberinto de los Chakras ($3.000)</h2>
-            <p style="color: #1f2937; margin-bottom: 1.5rem;">Elegí un portal energético para descubrir cuál es el chakra que te pide atención hoy y desbloquear tu bienestar.</p>
-            <div class="tarot-options">
-                <button class="tarot-btn" onclick="jugarChakras(1)">Portal Raíz 🔴</button>
-                <button class="tarot-btn" onclick="jugarChakras(2)">Portal Heart 💚</button>
-                <button class="tarot-btn" onclick="jugarChakras(3)">Portal Corona 💜</button>
-            </div>
-            <div id="resultadoChakras" style="background: white; padding: 2.5rem; border-radius: 14px; border: 2px solid var(--primary); display: none; margin-top: 2rem; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
-                <h3 id="tituloChakra" style="color: var(--primary); margin-top: 0; text-align: center; font-family: 'Playfair Display', serif; font-size: 1.8rem;"></h3>
-                <p id="significadoChakra" style="font-style: italic; color: #374151; font-size: 1.15rem; text-align: center; line-height: 1.8; margin-top: 1rem;"></p>
-                
-                <!-- Pregunta orientada a formaciones con salto a la sección de cursos -->
-                <div style="background: #fefce8; border: 1px dashed var(--primary); padding: 1.5rem; border-radius: 12px; margin-top: 2rem; text-align: center;">
-                    <p style="color: var(--primary); font-weight: 700; font-size: 1.05rem; margin-bottom: 1rem;">✨ ¿Sentís el llamado de profundizar en este camino y querés ver los cursos y precios disponibles?</p>
-                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                        <a href="#seccion-cursos" class="btn-mp">Ver Cursos y Precios 📚</a>
-                    </div>
+        <div class="services-grid">
+            <!-- Mesa 1 -->
+            <div class="service-card">
+                <div>
+                    <h3>🌿 Limpiezas Energéticas</h3>
+                    <p>Ideal si sentís pesadez, cansancio inexplicable, bloqueos recurrentes, o si querés limpiar energías densas, larvas astrales, magias o densidades acumuladas en tu campo áurico.</p>
                 </div>
-
-                <div style="text-align: center; margin-top: 2rem; border-top: 1px solid #fef08a; padding-top: 1.5rem;">
-                    <p style="margin: 0 0 1rem 0; font-weight: 700; color: var(--primary);">Valor de la partida y calibración energética: $3.000</p>
-                    <a href="https://mpago.la/1qXS3wH" target="_blank" class="btn-mp">Abonar para Jugar y Avanzar ($3.000)</a>
-                </div>
+                <a href="https://wa.me/TU_NUMERO_DE_TELEFONO?text=Hola!%20Siento%20el%20llamado%20a%20tomar%20la%20Mesa%20Radiónica%20de%20Limpiezas%20Energéticas" class="cta-button" target="_blank">Quiero esta Mesa</a>
             </div>
-        </section>
 
-        <!-- Rueda de lo que Tenés que Saber Hoy ($5.000) -->
-        <section class="interactive-box" style="background: linear-gradient(135deg, #fefce8, #fef08a); border-color: var(--primary);">
-            <h2>🎡 La Rueda de lo que Tenés que Saber Hoy</h2>
-            <p style="color: #1f2937; margin-bottom: 1.5rem;">Elegí una posición en la rueda energética y descubrí el mensaje clave que debés saber hoy ($5.000).</p>
-            <div class="tarot-options">
-                <button class="tarot-btn" onclick="girarRueda(1)">Posición 1 🌸</button>
-                <button class="tarot-btn" onclick="girarRueda(2)">Posición 2 💫</button>
-                <button class="tarot-btn" onclick="girarRueda(3)">Posición 3 🔮</button>
-                <button class="tarot-btn
+            <!-- Mesa 2 -->
+            <div class="service-card">
+                <div>
+                    <h3>🔓 Abrecaminos</h3>
+                    <p>Enfocada específicamente en destrabar los caminos en áreas clave como el trabajo, los proyectos, la economía o los nuevos comienzos, abriendo paso a la fluidez y las oportunidades.</p>
+                </div>
+                <a href="https://wa.me/TU_NUMERO_DE_TELEFONO?text=Hola!%20Siento%20el%20llamado%20a%20tomar%20la%20Mesa%20Radiónica%20Abrecaminos" class="cta-button" target="_blank">Quiero esta Mesa</a>
+            </div>
+
+            <!-- Mesa 3 -->
+            <div class="service-card">
+                <div>
+                    <h3>💖 Sanación Emocional</h3>
+                    <p>Una sesión profunda para sanar heridas emocionales, patrones repetitivos, vínculos, chakras y elevar tu vibración general hacia un estado de mayor paz y bienestar interior.</p>
+                </div>
+                <a href="https://wa.me/TU_NUMERO_DE_TELEFONO?text=Hola!%20Siento%20el%20llamado%20a%20tomar%20la%20Mesa%20Radiónica%20de%20Sanación" class="cta-button" target="_blank">Quiero esta Mesa</a>
+            </div>
+
+            <!-- Mesa 4 -->
+            <div class="service-card">
+                <div>
+                    <h3>💏 De las Relaciones</h3>
+                    <p>Trabaja de manera vincular entre dos personas (pareja, socios, vínculos familiares o laborales). Saca a la luz y transmuta nudos kármicos, cordones desarmónicos y fomenta la comunicación compasiva.</p>
+                </div>
+                <a href="https://wa.me/TU_NUMERO_DE_TELEFONO?text=Hola!%20Siento%20el%20llamado%20a%20tomar%20la%20Mesa%20Radiónica%20de%20las%20Relaciones" class="cta-button" target="_blank">Quiero esta Mesa</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Viaje de Vida. Todos los derechos reservados. ✨</p>
+    </footer>
+
+</body>
+</html>
